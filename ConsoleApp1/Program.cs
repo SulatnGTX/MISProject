@@ -207,6 +207,34 @@ namespace Project_1
 
             }
 
+            else if (Info == 7)
+            {
+
+                WriteLine("Enter ProductName:");
+                string Product = ReadLine();
+                bool authenticated = false;
+
+                foreach (var product in Products)
+                {
+                    if (product.Name == Product)
+                    {
+                        WriteLine($"{product.ID}");
+                        WriteLine($"{product.Name}");
+                        WriteLine($"{product.Category}");
+                        WriteLine($"{product.Description}");
+                        WriteLine($"{product.Price}");
+                        authenticated = true;
+                    }
+                }
+
+                if (!authenticated)
+                {
+                    WriteLine("You have entered incorrect ProductID. Please try again.");
+
+                }
+
+            }
+
         }
     }
 }
